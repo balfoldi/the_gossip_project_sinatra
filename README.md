@@ -1,7 +1,5 @@
 <h1>Hey bienvenus sur le nouveau site révolutionnaire maide in Pastèche!!!</h1>
 <hr>
-![picture](index.png)
-<hr>
 <h3>Ce programme a de multiple fonctionalité qui rendraient face book jaloux:</h3>
 
 <h6>-postage de ragot!</h6>
