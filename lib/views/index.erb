@@ -14,8 +14,8 @@
     	<a href=/gossips/<%= i %> >-Potin: <%= gossips[i].content %> </a><br/>
     	<a href=/gossips/edit/<%= i %> >editer</a>
     	<p>Commentaires: </p>
-    	<% gossips[i].comment.length.times do |i| %>
-			<p>-<%= comment[i] %> </p><br/>
+    	<% comments.each do |comment| %>
+    		<p><%= comment.content if comment.id.to_i == i %></p>
     	<% end %>
     	<form action='comment/<%= i %>' method='POST'>
 	    <input type='text' name='comment_content'/><br/>

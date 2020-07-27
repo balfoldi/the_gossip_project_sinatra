@@ -1,6 +1,6 @@
 class ApplicationController < Sinatra::Base
 	get '/' do
-		erb :index, locals: {gossips: Gossip.all}
+		erb :index, locals: {gossips: Gossip.all, comments: Comment.all}
 	end
 	get'/gossips/new/' do
     	erb :new_gossip
@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
 		redirect '/'
 	end
 	post '/comment/:id' do
-		Gossip.save_comment(params["comment_content"], params['id'])
+		Comment.new(params['id'], params["comment_content"]).save
 	redirect '/'
 	end
   run! if app_file == $0
