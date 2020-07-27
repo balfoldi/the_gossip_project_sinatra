@@ -2,9 +2,10 @@
 <hr>
 <h3>Ce programme a de multiple fonctionalité qui rendraient face book jaloux:</h3>
 
+<h6>-signer son ragot!</h6>
 <h6>-postage de ragot!</h6>
 
-<h6>-signer son ragot!</h6>
+<h6>-editer son ragot!</h6>
 
 <h6>-commenter son ragot!</h6>
 
