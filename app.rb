@@ -1,0 +1,17 @@
+require 'dotenv'
+require 'csv'
+require 'sinatra'
+require 'json'
+require 'nokogiri'
+require 'google_drive'
+require 'launchy'
+require 'pry'
+require 'open-uri'
+require 'time'
+require'date'
+require 'bundle'
+Bundler.require
+$:.unshift File.expand_path("./../lib", __FILE__)
+require 'router'
+require 'controller'
+require 'view'
