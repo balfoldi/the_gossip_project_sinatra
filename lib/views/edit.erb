@@ -6,7 +6,7 @@
     <h1>Edit un potin !</h1>
     <p>Balance ton potin via le formulaire ci-dessous</p>
     <p>Potin numéro : <%= id %></p>
-    <form action='/gossips/new/<%= id %>' method='POST'>
+    <form action='/gossips/edit/<%= id %>' method='POST'>
       Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
       Balance ton potin : <input type='text' name='gossip_content'/><br/>
       <input type='submit'/>

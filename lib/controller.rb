@@ -12,12 +12,17 @@ class ApplicationController < Sinatra::Base
 		erb :edit, locals: {id: params['id']}
 	end
 	post '/gossips/new/' do
+		puts params["gossip_author"]
 		Gossip.new(params["gossip_author"],params["gossip_content"]).save
 		redirect '/'
 	end
-	post '/gossips/new/' do
-		Gossip.edit(params["gossip_author"],params["gossip_content"], params["id"]).save
+	post '/gossips/edit/:id' do
+		Gossip.edit(params["gossip_author"],params["gossip_content"], params["id"])
 		redirect '/'
+	end
+	post '/comment/:id' do
+		Gossip.save_comment(params["comment_content"], params['id'])
+	redirect '/'
 	end
   run! if app_file == $0
 end

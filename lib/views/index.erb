@@ -11,8 +11,16 @@
     <% gossips.each_index do |i| %>
     	<br/>
     	<a href=/gossips/<%= i %> >-Auteur: <%= gossips[i].author %> </a><br/>
-    	<a href=/gossips/<%= i %> >-Potin: <%= gossips[i].content %> </a>
-    	<a href=/gossips/edit/<%= i %> >__editer</a>
+    	<a href=/gossips/<%= i %> >-Potin: <%= gossips[i].content %> </a><br/>
+    	<a href=/gossips/edit/<%= i %> >editer</a>
+    	<p>Commentaires: </p>
+    	<% gossips[i].comment.length.times do |i| %>
+			<p>-<%= comment[i] %> </p><br/>
+    	<% end %>
+    	<form action='comment/<%= i %>' method='POST'>
+	    <input type='text' name='comment_content'/><br/>
+	    <input type='submit'/>
+    </form>
     	<br/>
     <% end %>
   </body>
